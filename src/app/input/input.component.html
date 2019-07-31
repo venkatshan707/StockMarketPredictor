@@ -1,0 +1,5 @@
+<div>
+  <input #stockName id=box placeholder="Search stock you want to predict"/>
+  <button id=button (click)="this.stockservice.stockNameEntered(stockName.value) ; stockName.value=''"> Search </button>
+
+</div>
