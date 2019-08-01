@@ -14,7 +14,7 @@ import { InputComponent } from './input/input.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [StockService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

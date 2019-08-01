@@ -7,7 +7,7 @@ import {StockService} from '../stock.service';
 })
 export class InputComponent implements OnInit {
 
-  constructor(private stockservice:StockService) { }
+  constructor(private stockservice:StockService ) { }
 
   ngOnInit() {
   }
