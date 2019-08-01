@@ -7,10 +7,14 @@ import { Stock } from '../stock';
   styleUrls: ['./input.component.css']
 })
 export class InputComponent implements OnInit {
+  private currentStock:Stock;
 
   constructor(private stockservice:StockService ) { }
 
   ngOnInit() {
   }
+  getStock(name : any):void{
+    this.currentStock=this.stockservice.stockNameEntered(name);
 
+  }
 }

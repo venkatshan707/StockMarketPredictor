@@ -4,10 +4,10 @@ import {STOCKS} from './sample-data';
 @Injectable()
 export class StockService {
   private currentStock: Stock;
-  stockNameEntered(name: any): void{
+  stockNameEntered(name: any): Stock{
     for(var i=0;i<STOCKS.length;i++){
       if(STOCKS[i].name==name)
-      this.currentStock=STOCKS[i];
+      return STOCKS[i];
     }
 
   }
