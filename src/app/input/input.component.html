@@ -1,5 +1,15 @@
 <div>
-  <input #stockName id=box placeholder="Search stock you want to predict"/>
+  <span><input #stockName id=box placeholder="Search stock you want to predict"/>
   <button id=button (click)="this.stockservice.stockNameEntered(stockName.value) ; stockName.value=''"> Search </button>
+</span>
 
 </div>
+<br><br>
+<table>
+<tr *ngIf="this.stockservice.currentStock !==undefined">
+  <td id=alerttext>{{this.stockservice.currentStock.name}}</td>
+  <tr><td>{{this.stockservice.currentStock.symbol}}</td></tr>
+
+  <td *ngFor="let v of this.stockservice.currentStock.prices">{{v}}</td>
+
+  </table>
