@@ -8,6 +8,7 @@ import { Stock } from '../stock';
 })
 export class InputComponent implements OnInit {
   private currentStock:Stock;
+  private pastStocks:Stock[]=[];
 
   constructor(private stockservice:StockService ) { }
 
@@ -15,6 +16,8 @@ export class InputComponent implements OnInit {
   }
   getStock(name : any):void{
     this.currentStock=this.stockservice.stockNameEntered(name);
+    this.currentStock.searchTime=(new Date()).toUTCString();
+    this.pastStocks.push(this.currentStock);
 
   }
 }

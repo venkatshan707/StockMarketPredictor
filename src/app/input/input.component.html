@@ -4,12 +4,24 @@
 </span>
 
 </div>
-<br><br>
+<br><br><br>
 <table>
 <tr *ngIf="this.currentStock !==undefined">
   <td id=alerttext>{{this.currentStock.name}}</td>
-  <tr><td>{{this.currentStock.symbol}}</td></tr>
+  </tr><td>{{this.currentStock.symbol}}</td>
 
   <td *ngFor="let v of this.currentStock.prices">{{v}}</td>
+  <tr><td>{{this.currentStock.searchTime}}</td></tr>
 
-  </table>
+  </table><br><br>
+  <p><strong>Past Stocks</strong></p>
+  <table>
+    <tr *ngFor="let i of this.pastStocks">
+      <td id=alerttext>{{i.name}}</td>
+     <td>{{i.symbol}}</td>
+
+      <td *ngFor="let v of i.prices">{{v}}</td>
+    <td>{{i.searchTime}}</td>
+
+
+    </table>
