@@ -5,7 +5,7 @@
 
 </div>
 <br><br><br>
-<table>
+<table border="1px">
 <tr *ngIf="this.currentStock !==undefined">
   <td id=alerttext>{{this.currentStock.name}}</td>
   </tr><td>{{this.currentStock.symbol}}</td>
@@ -15,13 +15,14 @@
 
   </table><br><br>
   <p><strong>Past Stocks</strong></p>
-  <table>
-    <tr *ngFor="let i of this.pastStocks">
-      <td id=alerttext>{{i.name}}</td>
-     <td>{{i.symbol}}</td>
+  <table border="1px" (click)="this.getStock(paststock.name) ; stockName.value=''">
+    <tr *ngFor="let paststock of this.pastStocks">
+      <td id=alerttext>{{paststock.name}}</td>
+     <td>{{paststock.symbol}}</td>
 
-      <td *ngFor="let v of i.prices">{{v}}</td>
-    <td>{{i.searchTime}}</td>
+      <td *ngFor="let v of paststock.prices">{{v}}</td>
+    <td>{{paststock.searchTime}}</td>
+    <td (click)="this.getStock(paststock.name) ; ">click here<td>
 
 
     </table>
