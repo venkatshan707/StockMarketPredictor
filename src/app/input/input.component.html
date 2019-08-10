@@ -15,14 +15,14 @@
 
   </table><br><br>
   <p><strong>Past Stocks</strong></p>
-  <table border="1px" (click)="this.getStock(paststock.name) ; stockName.value=''">
+<table border="1px" >
     <tr *ngFor="let paststock of this.pastStocks">
       <td id=alerttext>{{paststock.name}}</td>
      <td>{{paststock.symbol}}</td>
 
       <td *ngFor="let v of paststock.prices">{{v}}</td>
     <td>{{paststock.searchTime}}</td>
-    <td (click)="this.getStock(paststock.name) ; ">click here<td>
+    <td ><a href="input/past-data-clicked/:{{paststock.name}}" routerLink="input/past-data-clicked/:{{paststock.name}}">click here</a></td>
 
 
     </table>

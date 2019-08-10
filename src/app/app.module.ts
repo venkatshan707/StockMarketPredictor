@@ -4,15 +4,19 @@ import {StockService} from './stock.service';
 
 import { AppComponent } from './app.component';
 import { InputComponent } from './input/input.component';
+import { PastStockClickedComponent } from './past-stock-clicked/past-stock-clicked.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    InputComponent
+    InputComponent,
+    PastStockClickedComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [StockService],
   bootstrap: [AppComponent]

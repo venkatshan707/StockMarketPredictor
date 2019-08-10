@@ -3,3 +3,7 @@ html {
    /*background-color: #42536e; */
    background-image: url("2.jpg");
  }
+ table{
+  text-align: center;
+  text-emphasis-color: green;
+ }
